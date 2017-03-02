@@ -7,6 +7,7 @@
 //============================================================================
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 using namespace std;
 
@@ -42,7 +43,7 @@ enum STATE Nano(int c);
 //
 //
 
-int main() {
+int main(void) {
 	int c;
 	while((c=getchar()) != ' '){
 		if(state==START){
@@ -62,7 +63,7 @@ int main() {
 			state=Start(c);
 		}
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }
 
 enum STATE Start(int c){
